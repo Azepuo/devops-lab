@@ -15,8 +15,7 @@ pipeline {
             steps {
                 sh 'kubectl apply -f deployment.yaml'
                 sh 'kubectl apply -f service.yaml'
-                sh 'minikube image load webapp:latest'
-                sh 'kubectl rollout restart deployment webapp'
+                
             }
         }
     }
