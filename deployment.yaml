@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: webapp:v60
-        imagePullPolicy: Never
+        image: yasssine22/webapp:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000

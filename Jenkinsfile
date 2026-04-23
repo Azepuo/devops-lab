@@ -6,9 +6,10 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Azepuo/devops-lab.git'
             }
         }
-        stage('Build Docker') {
+        stage('Build & Push Docker') {
             steps {
-                sh 'docker build -t webapp:latest .'
+                sh 'docker build -t yasssine22/webapp:latest .'
+                sh 'docker push yasssine22/webapp:latest'
             }
         }
         stage('Deploy Kubernetes') {
