@@ -13,10 +13,10 @@ pipeline {
         }
         stage('Deploy Kubernetes') {
             steps {
-                sh 'minikube image load webapp:latest'
+                echo 'Image built successfully. Deploying to Kubernetes...'
                 sh 'kubectl apply -f deployment.yaml'
                 sh 'kubectl apply -f service.yaml'
-                sh 'kubectl rollout restart deployment webapp'
+                // Note: minikube image load is done from the host in this local lab setup
             }
         }
     }
