@@ -9,6 +9,7 @@ pipeline {
         stage('Build Docker') {
             steps {
                 sh 'docker build -t webapp:latest .'
+                sh 'minikube image load webapp:latest'
             }
         }
         stage('Deploy Kubernetes') {
