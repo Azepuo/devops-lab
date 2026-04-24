@@ -1,9 +1,10 @@
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Version 20 - Prêt pour la Démo"
+    return "Bienvenue dans le module DevOps (Docker, K8s, Jenkins et ngrok)  version 21"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
